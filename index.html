@@ -19,7 +19,27 @@
             background-position: center top;
             background-attachment: fixed;
         }
+        
+        .modal {
+            text-align: center;
+            padding: 0!important;
+        }
+        
+        .modal:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -4px;
+        }
+        
+        .modal-dialog {
+            display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+        }
     </style>
+    <link rel="shortcut icon" href="https://img.icons8.com/ios-filled/30/000000/tms-tree.png" />
 </head>
 
 <body>
@@ -75,21 +95,21 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item  ">
+                    <div class="carousel-item  active">
                         <a href=""><img class="d-block w-100" width="300px" src="https://images.unsplash.com/photo-1491319669671-30014eb16b8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1554&q=80" alt="First slide"></a>
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Aimentación</h3>
                             <p>Descripcion del Transtorno</p>
                         </div>
                     </div>
-                    <div class="carousel-item ">
+                    <div class="carousel-item">
                         <a href=""><img class="d-block w-100" width="300px" src="https://images.unsplash.com/photo-1495427513693-3f40da04b3fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" alt="Second slide"></a>
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Personalidad</h3>
                             <p>Descripcion del Transtorno</p>
                         </div>
                     </div>
-                    <div class="carousel-item active">
+                    <div class="carousel-item">
                         <a href=""><img class="d-block w-100" width="300px" src="https://images.unsplash.com/photo-1496619228461-106b2fbe121f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Third slide"></a>
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Esquizofrenia</h3>
@@ -278,16 +298,101 @@
 
     <footer>
         <div class="jumbotron">
+            <p align="center">
+                Las enfermedades o trastornos mentales son afecciones que impactan su pensamiento, sentimientos, estado de ánimo y comportamiento. Pueden ser ocasionales o duraderas (crónicas). Pueden afectar su capacidad de relacionarse con los demás y funcionar cada
+                día. <br> Para más información, recursos o investigaciones sobre los trastornos que afectan la salud mental, visite el sitio web del NIMH en <a data-toggle="modal" data-target="#nimh"> www.nimh.nih.gov </a>(inglés) o
+                <a data-toggle="modal" data-target="#nimh-index">www.nimh.nih.gov/health/publications/espanol/index.shtml</a> (español).
+                <br> El sitio web MedlinePlus de la Biblioteca Nacional de Medicina <a data-toggle="modal" data-target="#medlineplus">https://medlineplus.gov/spanish</a> también tiene información sobre una amplia variedad de trastornos mentales.
+            </p>
             <center>
-                <p>
-                    Las enfermedades o trastornos mentales son afecciones que impactan su pensamiento, sentimientos, estado de ánimo y comportamiento. Pueden ser ocasionales o duraderas (crónicas). Pueden afectar su capacidad de relacionarse con los demás y funcionar cada
-                    día. <br> Para más información, recursos o investigaciones sobre los trastornos que afectan la salud mental, visite el sitio web del NIMH en <a href="www.nimh.nih.gov"> www.nimh.nih.gov </a>(inglés) o <a href="www.nimh.nih.gov/health/publications/espanol/index.shtml">www.nimh.nih.gov/health/publications/espanol/index.shtml</a>                    (español).
-                    <br> El sitio web MedlinePlus de la Biblioteca Nacional de Medicina <a href="https://medlineplus.gov/spanish">https://medlineplus.gov/spanish</a> también tiene información sobre una amplia variedad de trastornos mentales.
-                </p>
-                <a href="https://www.facebook.com/Transtornos-mentales-1954851487942119"><img src="https://img.icons8.com/office/30/000000/facebook.png" /></a>
+                <a data-toggle="modal" data-target="#fb"><img src="https://img.icons8.com/office/30/000000/facebook.png" /></a>
             </center>
         </div>
     </footer>
+
+    <!-- Modal (NIMH) -->
+    <div class="modal fade" id="nimh" tabindex="-1" role="dialog" aria-labelledby="nimh" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Estas seguro de que quieres salir?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Serás redireccionado a una pagina nueva la cual es (www.nimh.nih.gov), si no es asi haz click en el boton cerrar, si aceptas salir da click en continuar.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <a href="https://www.nimh.nih.gov"><button type="button" class="btn btn-primary">Continuar</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal (NIMH-INDEX) -->
+    <div class="modal fade" id="nimh-index" tabindex="-1" role="dialog" aria-labelledby="nimh" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Estas seguro de que quieres salir?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Serás redireccionado a una pagina nueva la cual es (www.nimh.nih.gov/health/publications/espanol/index.shtml), si no es asi haz click en el boton cerrar, si aceptas salir da click en continuar.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <a href="https://www.nimh.nih.gov/health/publications/espanol/index.shtml"><button type="button" class="btn btn-primary">Continuar</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal (MEDLINEPLUS) -->
+    <div class="modal fade" id="medlineplus" tabindex="-1" role="dialog" aria-labelledby="medlineplus" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Estas seguro de que quieres salir?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Serás redireccionado a una pagina nueva la cual es (https://medlineplus.gov/spanish), si no es asi haz click en el boton cerrar, si aceptas salir da click en continuar.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <a href="https://medlineplus.gov/spanish"><button type="button" class="btn btn-primary">Continuar</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal (FACEBOOK) -->
+    <div class="modal fade" id="fb" tabindex="-1" role="dialog" aria-labelledby="fb" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Estas seguro de que quieres salir?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Serás redireccionado a una pagina nueva la cual es (https://www.facebook.com/Transtornos-mentales-1954851487942119), si no es asi haz click en el boton cerrar, si aceptas salir da click en continuar.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <a href="https://www.facebook.com/Transtornos-mentales-1954851487942119"><button type="button" class="btn btn-primary">Continuar</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
